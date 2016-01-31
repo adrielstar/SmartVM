@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background_fill"
+    tools:context="ga.adriwalter.smartvending.ui.LoginActivity">
+
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:contentDescription="@string/content_desc_background"
+        android:scaleType="fitStart"
+        android:src="@mipmap/background"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="@string/app_name"
+        android:textColor="@android:color/white"
+        android:textSize="48sp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:id="@+id/editTextLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginEnd="@dimen/login_vertical_margin"
+        android:layout_marginLeft="@dimen/login_vertical_margin"
+        android:layout_marginRight="@dimen/login_vertical_margin"
+        android:layout_marginStart="@dimen/login_vertical_margin"
+        android:layout_marginTop="@dimen/login_vertical_margin"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/login_vertical_padding"
+        android:paddingEnd="@dimen/login_horizontal_padding"
+        android:paddingLeft="@dimen/login_horizontal_padding"
+        android:paddingRight="@dimen/login_horizontal_padding"
+        android:paddingStart="@dimen/login_horizontal_padding"
+        android:paddingTop="@dimen/login_vertical_padding">
+
+        <EditText
+            android:id="@+id/usernameField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_person_grey600_18dp"
+            android:drawablePadding="8dp"
+            android:drawableStart="@mipmap/ic_person_grey600_18dp"
+            android:hint="@string/usernameHint"
+            android:singleLine="true"
+            android:textColorHint="@color/light_gray"
+            android:textSize="17sp">
+
+            <requestFocus/>
+        </EditText>
+
+        <EditText
+            android:id="@+id/passwordField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_https_grey600_18dp"
+            android:drawablePadding="8dp"
+            android:drawableStart="@mipmap/ic_https_grey600_18dp"
+            android:ems="10"
+            android:hint="@string/passwordHint"
+            android:imeActionId="@+id/login"
+            android:imeActionLabel="@string/loginButtonLabel"
+            android:imeOptions="actionUnspecified"
+            android:inputType="textPassword"
+            android:textColorHint="@color/light_gray"
+            android:textSize="17sp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/loginButton"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextLayout"
+        android:layout_marginEnd="@dimen/login_vertical_margin"
+        android:layout_marginLeft="@dimen/login_vertical_margin"
+        android:layout_marginRight="@dimen/login_vertical_margin"
+        android:layout_marginStart="@dimen/login_vertical_margin"
+        android:background="@drawable/button_custom"
+        android:text="@string/loginButtonLabel"
+        android:textColor="@color/text_color"
+        android:textSize="13sp"/>
+
+    <TextView
+        android:id="@+id/signUpText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loginButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:text="@string/signUpText"
+        android:textColor="@android:color/white"/>
+
+</RelativeLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ga.adriwalter.smartvending.ui.AccountFragment">
+
+    <TextView
+        android:id="@+id/currentBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="@dimen/login_vertical_padding"
+        android:layout_marginLeft="@dimen/login_vertical_margin"
+        android:layout_marginRight="@dimen/login_vertical_padding"
+        android:layout_marginStart="@dimen/login_vertical_margin"
+        android:layout_marginTop="@dimen/login_vertical_margin"
+        android:text="@string/current_balance"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/currentAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/login_vertical_margin"
+        android:layout_toEndOf="@+id/currentBalance"
+        android:layout_toRightOf="@+id/currentBalance"
+        android:textSize="20sp"
+        android:hint="0"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:id="@+id/editTextLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/currentAmount"
+        android:layout_marginEnd="@dimen/login_vertical_margin"
+        android:layout_marginLeft="@dimen/login_vertical_margin"
+        android:layout_marginRight="@dimen/login_vertical_margin"
+        android:layout_marginStart="@dimen/login_vertical_margin"
+        android:layout_marginTop="@dimen/login_vertical_margin"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/login_vertical_padding"
+        android:paddingEnd="@dimen/login_horizontal_padding"
+        android:paddingLeft="@dimen/login_horizontal_padding"
+        android:paddingRight="@dimen/login_horizontal_padding"
+        android:paddingStart="@dimen/login_horizontal_padding"
+        android:paddingTop="@dimen/login_vertical_padding">
+
+        <EditText
+            android:id="@+id/amountValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_action_21_512"
+            android:drawablePadding="8dp"
+            android:drawableStart="@drawable/ic_action_21_512"
+            android:hint="@string/hint_amount_eur"
+            android:inputType="numberDecimal"
+            android:singleLine="true"
+            android:textColorHint="@color/light_gray"
+            android:textSize="17sp">
+
+            <requestFocus/>
+        </EditText>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnAddMoney"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextLayout"
+        android:layout_marginEnd="@dimen/login_vertical_margin"
+        android:layout_marginLeft="@dimen/login_vertical_margin"
+        android:layout_marginRight="@dimen/login_vertical_margin"
+        android:layout_marginStart="@dimen/login_vertical_margin"
+        android:background="@drawable/button_custom"
+        android:text="@string/btn_text_add_money"
+        android:textColor="@color/text_color"
+        android:textSize="13sp"/>
+</RelativeLayout>

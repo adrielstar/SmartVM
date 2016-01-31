@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:background="@mipmap/background_fill"
+    tools:context="ga.adriwalter.smartvending.ui.SignUpActivity"
+    tools:showIn="@layout/activity_sign_up">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/backgroundImage"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@mipmap/background"
+        android:scaleType="fitStart"
+        android:contentDescription="@string/content_desc_background"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="@string/app_name"
+        android:textSize="48sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:id="@+id/editTextLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/sign_up_vertical_margin"
+        android:layout_marginLeft="@dimen/login_vertical_margin"
+        android:layout_marginStart="@dimen/login_vertical_margin"
+        android:layout_marginRight="@dimen/login_vertical_margin"
+        android:layout_marginEnd="@dimen/login_vertical_margin"
+        android:paddingLeft="@dimen/login_horizontal_padding"
+        android:paddingStart="@dimen/login_horizontal_padding"
+        android:paddingRight="@dimen/login_horizontal_padding"
+        android:paddingEnd="@dimen/login_horizontal_padding"
+        android:paddingTop="@dimen/login_vertical_padding"
+        android:paddingBottom="@dimen/login_vertical_padding"
+        android:background="@android:color/white"
+        android:layout_below="@+id/title">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/usernameField"
+            android:singleLine="true"
+            android:drawableLeft="@mipmap/ic_person_grey600_18dp"
+            android:drawableStart="@mipmap/ic_person_grey600_18dp"
+            android:drawablePadding="8dp"
+            android:textColorHint="@color/light_gray"
+            android:hint="@string/usernameHint"
+            android:textSize="17sp">
+
+            <requestFocus/>
+        </EditText>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/passwordField"
+            android:drawableLeft="@mipmap/ic_https_grey600_18dp"
+            android:drawableStart="@mipmap/ic_https_grey600_18dp"
+            android:drawablePadding="8dp"
+            android:textColorHint="@color/light_gray"
+            android:hint="@string/passwordHint"
+            android:textSize="17sp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/emailField"
+            android:imeActionId="@+id/signUp"
+            android:imeActionLabel="@string/signUpButton"
+            android:imeOptions="actionUnspecified"
+            android:drawableLeft="@mipmap/ic_email_grey600_18dp"
+            android:drawableStart="@mipmap/ic_email_grey600_18dp"
+            android:drawablePadding="8dp"
+            android:textColorHint="@color/light_gray"
+            android:hint="@string/emailHint"
+            android:textSize="17sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/login_vertical_margin"
+        android:layout_marginStart="@dimen/login_vertical_margin"
+        android:layout_marginRight="@dimen/login_vertical_margin"
+        android:layout_marginEnd="@dimen/login_vertical_margin"
+        android:background="@drawable/button_custom"
+        android:layout_below="@+id/editTextLayout">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="?android:attr/borderlessButtonStyle"
+            android:text="@string/signUpButton"
+            android:textColor="@color/text_color"
+            android:id="@+id/signUpButton"
+            android:textSize="13sp"
+            android:layout_weight="1"
+            android:background="@drawable/button_custom"/>
+
+        <ImageView
+            android:id="@+id/buttonDivider"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/abc_action_button_min_height_material"
+            android:src="@mipmap/button_divider"
+            android:contentDescription="@string/content_desc_button_divider"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="?android:attr/borderlessButtonStyle"
+            android:text="@string/cancelButton"
+            android:textColor="@color/text_color"
+            android:id="@+id/cancelButton"
+            android:textSize="13sp"
+            android:layout_weight="1"
+            android:background="@drawable/button_custom"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

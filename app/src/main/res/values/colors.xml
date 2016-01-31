@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#9C27B0</color>
+    <color name="colorPrimaryDark">#6A1B9A</color>
+    <color name="colorAccent">#E22F84</color>
+    <color name="colorLight_green">#7ABA34</color>
+    <color name="ColorDark_green">#5B852D</color>
+    <color name="ColorLight_gray">#F2F2F2</color>
+    <color name="ColorPhoto_tint">#7f101010</color>
+    <color name="ColorWithe">#FFFF</color>
+    <color name="light_gray">#bbbbbb</color>
+    <color name="pressed_button">#ba9dda</color>
+    <color name="focused_button">#d6c3ed</color>
+    <color name="light_button">#e1d2f3</color>
+    <color name="text_color">#250054</color>
+</resources>
