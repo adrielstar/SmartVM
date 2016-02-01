@@ -77,7 +77,7 @@ public class BluethoothConnection {
         turnOnRelay();
 
         // on Pause
-        Toast.makeText(mAppCompatActivity, "...Succesfully...", Toast.LENGTH_LONG).show();
+
 
         if (outStream != null) {
             try {
@@ -99,6 +99,7 @@ public class BluethoothConnection {
         if (btSocket != null) {
             try {
                 btSocket.getOutputStream().write(mId.getBytes());
+                Toast.makeText(mAppCompatActivity, "...Succesfully...", Toast.LENGTH_LONG).show();
             } catch (IOException e) {
                 msg("Did not connect with Vending Machine");
             }
